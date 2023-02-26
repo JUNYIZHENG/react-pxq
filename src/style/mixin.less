@@ -1,20 +1,20 @@
-@base-color: #975ec9;
+@base-color: #9fc5e8;
 @common-wd: 30px;
-@assets-img: '../assets/images/';
-@base-red: #F20500;
+@assets-img: "../assets/images/";
+@base-red: #f20500;
 
-.flex(@justify-content: center, @align-items: center) when (iskeyword(@justify-content)), (iskeyword(@align-items)){
+.flex(@justify-content: center, @align-items: center) when (iskeyword(@justify-content)), (iskeyword(@align-items)) {
   display: flex;
   justify-content: @justify-content;
   align-items: @align-items;
 }
 
-.commonBack(@url) when (isstring(@url)){
+.commonBack(@url) when (isstring(@url)) {
   background: url("@{assets-img}@{url}") no-repeat center;
   background-size: 100%;
 }
 
-.coverScreen(@position: absolute, @backColor: #fff) when (iskeyword(@position)), (iscolor(@backColor)){
+.coverScreen(@position: absolute, @backColor: #fff) when (iskeyword(@position)), (iscolor(@backColor)) {
   position: @position;
   top: 0;
   left: 0;
@@ -25,21 +25,21 @@
   background-color: @backColor;
 }
 
-.positionCenter(@position: absolute) when (iskeyword(@position)){
+.positionCenter(@position: absolute) when (iskeyword(@position)) {
   position: @position;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
 
-.positionLeft(@position: absolute, @left: @common-wd) when (iskeyword(@position)), (ispixel(@left)){
+.positionLeft(@position: absolute, @left: @common-wd) when (iskeyword(@position)), (ispixel(@left)) {
   position: @position;
   top: 50%;
   left: @left;
   transform: translate3d(0, -50%, 0);
 }
 
-.positionRight(@position: absolute, @right: @common-wd) when (iskeyword(@position)), (ispixel(@right)){
+.positionRight(@position: absolute, @right: @common-wd) when (iskeyword(@position)), (ispixel(@right)) {
   position: @position;
   top: 50%;
   right: @right;
@@ -52,7 +52,7 @@
   text-align: @text-align;
 }
 
-.wh(@w, @h) when (ispixel(@w))or(ispercentage(@w)), (ispixel(@h))or(ispercentage(@h)){
+.wh(@w, @h) when (ispixel(@w))or(ispercentage(@w)), (ispixel(@h))or(ispercentage(@h)) {
   width: @w;
   height: @h;
 }

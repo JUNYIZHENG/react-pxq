@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { is, fromJS } from 'immutable';
-import TouchableOpacity from '@/components/TouchableOpacity/TouchableOpacity';
+import ConfirmButton from '@/components/ConfirmButton/ConfirmButton';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import './alert.less';
 
@@ -36,7 +36,7 @@ export default class Alert extends Component{
           this.props.alertStatus&&<div className="alert-con">
             <div className="alert-context">
               <div className="alert-content-detail">{this.props.alertTip}</div>
-              <TouchableOpacity className="confirm-btn" clickCallBack={this.confirm}/>
+              <ConfirmButton className="confirm-btn" clickCallBack={this.confirm}/>
             </div>
           </div>
         }
